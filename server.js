@@ -3,13 +3,17 @@ var app = express();
 
 app.use(express.static('assets'));
 
-app.use(function (req, res, next) {
-    console.log('Hej, jestem pośrednikiem między żądaniem a odpowiedzią!');
+app.use('/store', function (req, res, next) {
+    console.log('Hej, jestem pośrednikiem przy żadaniu do /store');
     next();
 });
 
 app.get('/get', function (req, res) {
     res.send('Hello World!');
+});
+
+app.get('/store', function (req, res) {
+    res.send('To jest sklep')
 });
 
 app.get('/userform', function (req, res) {
@@ -18,6 +22,10 @@ app.get('/userform', function (req, res) {
         last_name: req.query.last_name
     };
    res.end(JSON.stringify(response));
+});
+
+app.use(function (req, res) {
+    res.status(404).send('Sorka, ale chyba dałeś ciała wysyłyjąc tego requesta ;)');
 });
 
 const server = app.listen(3000, 'localhost', function () {
