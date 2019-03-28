@@ -1,0 +1,28 @@
+{
+  "name": "expressjs-static",
+  "version": "1.0.0",
+  "description": "examples with static files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafalPijet/ExpressJS-static.git"
+  },
+  "keywords": [
+    "expressjs",
+    "static",
+    "files"
+  ],
+  "author": "LopezPL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafalPijet/ExpressJS-static/issues"
+  },
+  "homepage": "https://github.com/RafalPijet/ExpressJS-static#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
