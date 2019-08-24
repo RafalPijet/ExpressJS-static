@@ -28,7 +28,7 @@ app.use(function (req, res) {
     res.status(404).send('Sorka, ale chyba dałeś ciała wysyłyjąc tego requesta ;)');
 });
 
-const server = app.listen(3000, 'localhost', function () {
+const server = app.listen(3001, 'localhost', function () {
     var host = server.address().address;
     var port = server.address().port;
 
